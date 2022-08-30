@@ -4,7 +4,7 @@ import pyperclip
 import sys
 
 def main():
-    sms = gen_message(get_info(), get_dr(), get_clinic(), get_time())
+    sms = gen_message(get_info(), get_time(), get_dr(), get_clinic())
     print(sms)
     copy_sms(sms)
 
@@ -78,8 +78,8 @@ def get_info():
     return appointment
 
 # Generate message text based on input from user
-def gen_message(day, doctor, clinic, time):
-    message = f"You have an appointment to see dr. {doctor} \n{day} kl. {time}\nat the {clinic}.\nCall us on 000-PYTHON or send an email to: post@thepythonclinic.com if you have any questions.\nKind regards\nthe Python Clinic"
+def gen_message(day, time, doctor, clinic):
+    message = f"You have an appointment to see dr. {doctor} \n{day} at {time}\nat the {clinic}.\nCall us on 000-PYTHON or send an email to: post@thepythonclinic.com if you have any questions.\nKind regards\nthe Python Clinic"
     return message
 
 # find weekday using the datetime module based on date provided by user. If user has provided an invalid date inform user with message.
