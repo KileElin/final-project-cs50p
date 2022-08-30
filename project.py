@@ -118,7 +118,7 @@ def get_date():
 
 # The function takes as input the number of the month and returns the name of the month. The functions returns False if the number is not between 1-12.
 def convert_month(n):
-    months = ["January", "February", "March", "April", "Mai", "June", "Juli", "August", "September", "October", "November", "December"]
+    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     if 0 < n < 13:
         index = n - 1
         return months[index]
