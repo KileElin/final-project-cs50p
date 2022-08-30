@@ -24,8 +24,3 @@ def test_convert_month():
     assert project.convert_month(12) == "December"
     assert project.convert_month(0) == False
     
-
-
-test_gen_message()
-test_get_day()
-test_convert_month()
